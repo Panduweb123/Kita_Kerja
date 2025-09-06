@@ -27,5 +27,46 @@
       </nav>
     </header>
 
-    
+    <section class="auth">
+      <div class="form-container">
+        <!-- Login Form -->
+        <div class="form-card" id="loginForm">
+          <h2>Login</h2>
+          <form>
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Password" required />
+            <button><a href="home.html">Login</a></button>
+          </form>
+          <p>
+            Belum punya akun? <a href="#" onclick="showRegister()">Register</a>
+          </p>
+        </div>
+
+        <!-- Register Form -->
+        <div class="form-card" id="registerForm" style="display: none">
+          <h2>Register</h2>
+          <form>
+            <input type="text" placeholder="Nama Lengkap" required />
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Password" required />
+            <input type="password" placeholder="Konfirmasi Password" required />
+            <button type="submit">Register</button>
+          </form>
+          <p>Sudah punya akun? <a href="#" onclick="showLogin()">Login</a></p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function showRegister() {
+        document.getElementById("loginForm").style.display = "none";
+        document.getElementById("registerForm").style.display = "block";
+      }
+
+      function showLogin() {
+        document.getElementById("registerForm").style.display = "none";
+        document.getElementById("loginForm").style.display = "block";
+      }
+    </script>
+  </body>
 </html>
